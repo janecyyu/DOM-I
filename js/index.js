@@ -45,10 +45,12 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
+
 //add body bgc
 const wholePage = document.querySelector("body");
 wholePage.style.backgroundColor = "#f0ffff";
 console.log(wholePage)
+
 //nav
 const aElement = document.querySelectorAll("a");
 aElement[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -57,46 +59,57 @@ aElement[2].textContent = siteContent["nav"]["nav-item-3"];
 aElement[3].textContent = siteContent["nav"]["nav-item-4"];
 aElement[4].textContent = siteContent["nav"]["nav-item-5"];
 aElement[5].textContent = siteContent["nav"]["nav-item-6"];
+
 //nav - change color
 const navElement = document.querySelectorAll("a");
 navElement.forEach(item => (item.style.color = "green"));
+
 //nav - add an item append
 const newOne = document.createElement("img");
 newOne.src =
   "https://findicons.com/files/icons/2129/web_2_0_origami/40/gmail_small.png";
 const parent = document.querySelector("nav");
 parent.prepend(newOne);
+
 //nav - add an item behind
 const newTwo = document.createElement("h3");
 newTwo.textContent = "Hello!";
 newTwo.style.color = "pink";
 parent.append(newTwo);
+
 //cta image
 const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
+
 //cta h1
 const ctaH1 = document.querySelector("h1");
 ctaH1.textContent = siteContent["cta"]["h1"];
+
 //cta button
 const ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
+
 //cta click btn
 ctaButton.addEventListener('click',(event) => {
   event.target.textContent = "submitted!";
-})
+});
+
 //main-content: top-content
 const firstTop = document.querySelectorAll("h4")[0];
 firstTop.textContent = siteContent["main-content"]["features-h4"];
 const secondTop = document.querySelectorAll("h4")[1];
 secondTop.textContent = siteContent["main-content"]["about-h4"];
-////main-content: top-content text
+
+//main-content: top-content text
 const firstTopContent = document.querySelectorAll("p")[0];
 firstTopContent.textContent = siteContent["main-content"]["features-content"];
 const secondTopContent = document.querySelectorAll("p")[1];
 secondTopContent.textContent = siteContent["main-content"]["about-content"];
+
 //main img
 const mainImg = document.querySelector(".middle-img");
 mainImg.src = siteContent["main-content"]["middle-img-src"];
+
 //bottom content h4
 const btLeft = document.querySelectorAll("h4")[2];
 btLeft.textContent = siteContent["main-content"]["services-h4"];
@@ -104,6 +117,7 @@ const btMiddle = document.querySelectorAll("h4")[3];
 btMiddle.textContent = siteContent["main-content"]["product-h4"];
 const btRight = document.querySelectorAll("h4")[4];
 btRight.textContent = siteContent["main-content"]["vision-h4"];
+
 //bottom text
 const btLeftContent = document.querySelectorAll("p")[2];
 btLeftContent.textContent = siteContent["main-content"]["services-content"];
@@ -111,6 +125,7 @@ const btMiddleContent = document.querySelectorAll("p")[3];
 btMiddleContent.textContent = siteContent["main-content"]["product-content"];
 const btRightContent = document.querySelectorAll("p")[4];
 btRightContent.textContent = siteContent["main-content"]["vision-content"];
+
 //contact
 const contactHeader = document.querySelectorAll("h4")[5];
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
@@ -120,6 +135,7 @@ const phoneElement = document.querySelectorAll("p")[6];
 phoneElement.textContent = siteContent["contact"]["phone"];
 const emailElement = document.querySelectorAll("p")[7];
 emailElement.textContent = siteContent["contact"]["email"];
+
 //footer
 const copyRight = document.querySelectorAll("p")[8];
 copyRight.textContent = siteContent["footer"]["copyright"];
